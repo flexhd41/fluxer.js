@@ -1,6 +1,6 @@
 {
-  "name": "fluxor.js",
-  "version": "1.0.0",
+  "name": "@flexhd41/fluxor.js",
+  "version": "1.0.1",
   "type": "module",
   "description": "A JavaScript/TypeScript SDK for the Fluxor platform — bot development made easy.",
   "main": "dist/index.js",
@@ -8,24 +8,35 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flexhd41/fluxor.js.git"
+  },
+  "homepage": "https://github.com/flexhd41/fluxor.js#readme",
+  "bugs": {
+    "url": "https://github.com/flexhd41/fluxor.js/issues"
   },
   "keywords": [
     "fluxor",
+    "fluxer",
     "bot",
     "sdk",
     "api",
     "gateway",
     "websocket",
-    "chat"
+    "chat",
+    "typescript"
   ],
+  "author": "flexhd41",
   "license": "MIT",
   "dependencies": {
     "ws": "^8.18.0"

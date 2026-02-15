@@ -114,6 +114,9 @@ export class EmbedBuilder {
 
   /** Set the embed title (max 256 characters). */
   setTitle(title: string): this {
+    if (title == null) {
+      throw new TypeError("Title must be a string, received " + typeof title);
+    }
     if (title.length > MaxTitleLength) {
       throw new RangeError(`Title exceeds ${MaxTitleLength} characters.`);
     }
@@ -123,6 +126,9 @@ export class EmbedBuilder {
 
   /** Set the embed description (max 4096 characters). */
   setDescription(description: string): this {
+    if (description == null) {
+      throw new TypeError("Description must be a string, received " + typeof description);
+    }
     if (description.length > MaxDescriptionLength) {
       throw new RangeError(`Description exceeds ${MaxDescriptionLength} characters.`);
     }
